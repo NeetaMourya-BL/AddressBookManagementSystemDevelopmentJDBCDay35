@@ -20,6 +20,7 @@ public class AddressBookSystem {
 		System.out.println(" 0. Exit. ");
 		System.out.println(" 1. Create contact. ");
 		System.out.println(" 2. Add contact. ");
+		System.out.println(" 3. Edit contact. ");
 		menu = sc.nextInt();
 
 		while (menu != 0) {
@@ -43,15 +44,7 @@ public class AddressBookSystem {
 					String phoneNumber = sc.next();
 					System.out.println("Enter email:");
 					String email = sc.next();
-					contact.add(new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email));// Creating
-																													// a
-																													// new
-																													// object
-																													// and
-																													// adding
-																													// it
-																													// to
-																													// list
+					contact.add(new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email));// Creating a new object and adding it to list
 					menu = sc.nextInt();
 				}
 				break;
@@ -73,14 +66,21 @@ public class AddressBookSystem {
 					String phoneNumber = sc.next();
 					System.out.println("Enter email:");
 					String email = sc.next();
-					contact.add(new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email)); // Creating a new object and adding it to list
+					contact.add(new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email));// Creating a new object and adding it to list
 					menu = sc.nextInt();
 				}
+				break;
+
+			case 3:
+				System.out.println("Enter First Name of contact that you would like to edit: ");
+				int index = sc.nextInt();
+				System.out.println("Updated name is: ");
 				break;
 			}
 			System.out.println(" 0. Exit. ");
 			System.out.println(" 1. Create contact. ");
 			System.out.println(" 2. Add contact. ");
+			System.out.println(" 3. Edit contact. ");
 			menu = sc.nextInt();
 		}
 		System.out.println("Goodbye!");
@@ -97,5 +97,15 @@ public class AddressBookSystem {
 			String phoneNumber, String email) {
 		Contact person = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
 		contact.add(person);
+	}
+
+	private void editData(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNumber, String email) {
+		Contact person = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
+		boolean index;
+		if (index = contact != null) {
+			boolean temp = index;
+			return;
+		}
 	}
 }
